@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop:disable  Metrics/BlockLength
 RSpec.describe Post, type: :model do
   before(:all) do
     @user = User.new(name: 'Josh', photo: 'photo.png', bio: 'here is bio', posts_counter: 0)
@@ -65,3 +65,5 @@ RSpec.describe Post, type: :model do
     expect(subject.author.posts_counter).to eq(1)
   end
 end
+
+# rubocop:enable  Metrics/BlockLength
