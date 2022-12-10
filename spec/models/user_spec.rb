@@ -3,10 +3,10 @@ require 'rails_helper'
 # Test user model
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Josh', photo: 'photo.png', bio: 'Here is my Bio', posts_counter: 0)}
+  subject { User.new(name: 'Josh', photo: 'photo.png', bio: 'Here is my Bio', posts_counter: 0) }
 
-  before {subject.save}
-  it "should return true if name is present" do
+  before { subject.save }
+  it 'should return true if name is present' do
     expect(subject).to be_valid
   end
 
