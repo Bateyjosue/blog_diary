@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     user = User.create(name: 'josh', posts_counter: 0)
@@ -41,3 +41,5 @@ RSpec.describe 'Posts', type: :request do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
+
