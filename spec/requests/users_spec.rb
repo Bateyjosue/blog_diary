@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
     before :each do
-      get "/users"
+      get '/users'
     end
 
     it 'returns http success' do
       expect(response).to be_successful
     end
 
-    it 'should render index template' do 
+    it 'should render index template' do
       expect(response).to render_template(:index)
     end
 
@@ -20,7 +20,6 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET /show' do
-
     user = User.create(name: 'josh', posts_counter: 0)
     user.save
 
@@ -35,7 +34,7 @@ RSpec.describe 'Users', type: :request do
     it 'should render show template' do
       expect(response).to render_template(:show)
     end
-  
+
     it 'should return the body of show template' do
       expect(response.body).to include('Here is a specific user')
     end
