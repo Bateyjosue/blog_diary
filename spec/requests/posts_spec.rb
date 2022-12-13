@@ -18,7 +18,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response.body).to include('Here is a list of posts for a given user')
     end
   end
-end 
+end
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET /show' do
