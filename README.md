@@ -170,7 +170,15 @@ To run the project, execute the following command:
 - LinkedIn: [Bateyjosue](https://www.linkedin.com/in/josue-ishara/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- FUTURE FEATURES -->
 
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Views**
+- [ ] **Forms**
+- [ ] **Add Devise.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
