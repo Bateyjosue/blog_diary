@@ -1,1 +1,15 @@
-Here is a list of posts for a given user
+<div class="list-posts">
+  <article class="cards-posts">
+  <ul class="list-posts__author__info">
+    <%= render partial: "users/shared/user", locals: {user: @posts.first.author} %>
+  </ul>
+  <div class="post-section">
+    <% @posts.each do |post| %>
+      <%= render partial: "posts/shared/post", locals: {post: post} %>
+      <ul>
+        <%= render partial: "posts/shared/comment", locals: {comments: post.last_five_comment} %>
+      </ul>
+    <% end %>
+  </div>
+  </article>
+</div>

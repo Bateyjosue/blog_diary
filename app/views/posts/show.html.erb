@@ -1,1 +1,23 @@
-Here is a specific post for a given user
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<h1 class="user-banner">Here is a specific post for a given user</h1>
+<ul class="single-post">
+  <div class="single-post__info">
+    <span>
+      <%= @post.title%> by <%= @post.author.name %>
+    </span>
+    <span>
+      <span class="material-symbols-outlined">comment</span><%=@post.comments_counter %>, 
+      <span class="material-symbols-outlined">favorite</span><%= @post.likes_counter %>
+    </span>
+  </div>
+  <p class="single-post__info__desc"><%= @post.text %></p>
+  <ul class="single-post__info__comments">
+  <h4>Comments:</h4>
+    <% @post.comments.each do |comment| %>
+      <li>
+        <a href="/users/<%= comment.author.id %>"><%= comment.author.name %></a>
+      : <%= comment.text %></li>
+    <% end %>
+  </ul>
+</ul>

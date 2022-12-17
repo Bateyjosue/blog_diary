@@ -1,0 +1,12 @@
+<li class="">
+  <div class="">
+  <% comments.each do |comment| %>
+    <div class="">
+      <p class="">
+        <%= comment.author.name %>:
+        <span type="button" class=""><%= comment.text%></span>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</li>

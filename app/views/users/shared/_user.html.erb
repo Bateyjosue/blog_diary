@@ -1,0 +1,11 @@
+<li class="cards-users__content">
+  <div class="cards-users__content__image">
+    <img src=<%= user.photo %> />
+  </div>
+  <div class="cards-users__content__body">
+    <h2>
+      <a href="/users/<%= user.id %>"><%= user.name %></a>
+    </h2>
+    <p><%= user.posts_counter %> Posts</p>
+  </div>
+</li>
