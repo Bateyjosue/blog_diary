@@ -1,0 +1,7 @@
+<%= form_with model: Post.new, local: true, method: :post, url: :new_user_post do |form| %>
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title %>
+  <%= form.label :text, "Text" %>
+  <%= form.text_area :text %>
+  <%= form.submit "Add Post" %>
+<% end %>

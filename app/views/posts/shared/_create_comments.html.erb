@@ -1,0 +1,11 @@
+<li >
+  <div >
+    <h2>
+      Add New Comment
+    </h2>
+    <%= form_with(model: [ author, author.comments.build ], url: "/users/#{@post.author.id}/posts/#{@post.id}/comments") do |form| %>
+      <%= form.text_field :text, placeholder:"Comment" %>
+      <%= form.button "Comment" %>
+    <% end %>
+  </div>
+</li>
