@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'likes/create'
+  get 'comments/create'
 
   root 'users#index'
 
@@ -17,6 +19,9 @@ Rails.application.routes.draw do
   #rails g controller posts index show
 
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+    resources :posts, only: [:index, :show, :new, :create] do
+      resources :comments, only: [:new, :create]
+      resources :likes, only: [:create]
+    end
   end
 end
