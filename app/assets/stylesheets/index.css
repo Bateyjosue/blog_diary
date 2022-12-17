@@ -186,6 +186,17 @@ color: #8d8d8da8;
   padding: 0rem .3rem;
   }
 
+  .post-section {
+    padding: 1rem;
+  }
+
+  .post-section ul {
+    list-style-type: none;
+  }
+
+  .post-section ul .counter {
+    color: red;
+  }
 
 
 @media screen and (min-width:780px) {

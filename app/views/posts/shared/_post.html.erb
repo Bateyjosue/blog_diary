@@ -1,8 +1,10 @@
-<h1 class="user-banner">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<h1 class="">
   <a href="/users/<%= post.author.id %>/posts/<%= post.id %>"><%= post.title %>#<%= post.id %></a>
 </h1>
 <p><%= post.text %></p>
-<p>
-  <span><%= post.comments_counter %></span>
-  <span><%= post.likes_counter %></span>
-</p>
+<span class="counter">
+  <span class="material-symbols-outlined">comment</span><%=post.comments_counter %>, 
+  <span class="material-symbols-outlined">favorite</span><%= post.likes_counter %>
+</span>
