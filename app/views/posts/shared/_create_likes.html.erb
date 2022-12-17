@@ -1,4 +1,4 @@
-<%= form_with url: "/users/#{post.author.id}/posts/#{post.id}/likes", do |form| %>
+<%= form_with url: "/users/#{post.author.id}/posts/#{post.id}/likes" do |form| %>
   <p><%= post.likes_counter%></p>
-  <%= form.button "[ + ]", %>
+  <%= form.button " + " %>
 <% end %>
