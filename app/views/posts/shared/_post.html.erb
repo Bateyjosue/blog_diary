@@ -1,0 +1,8 @@
+<h1 class="user-banner">
+  <a href="/users/<%= post.author.id %>/posts/<%= post.id %>"><%= post.title %>#<%= post.id %></a>
+</h1>
+<p><%= post.text %></p>
+<p>
+  <span><%= post.comments_counter %></span>
+  <span><%= post.likes_counter %></span>
+</p>
