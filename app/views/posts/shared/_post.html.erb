@@ -7,4 +7,5 @@
 <span class="counter">
   <span class="material-symbols-outlined">comment</span><%=post.comments_counter %>, 
   <span class="material-symbols-outlined">favorite</span><%= post.likes_counter %>
+  <%= render partial: "posts/shared/create_likes", locals: {post: post} %>
 </span>

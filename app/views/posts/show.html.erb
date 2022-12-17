@@ -19,5 +19,6 @@
         <a href="/users/<%= comment.author.id %>"><%= comment.author.name %></a>
       : <%= comment.text %></li>
     <% end %>
+    <%= render partial: 'posts/shared/create_comments', locals: { author: @post.author } %>
   </ul>
 </ul>

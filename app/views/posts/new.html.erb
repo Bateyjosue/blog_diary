@@ -1,0 +1,12 @@
+<h1>
+  New Post From User
+</h1>
+
+<%# <%= render partial: 'posts/shared/form', locals: {post: post} %> 
+<%= form_with model: @post,  url: :new_user_post do |form| %>
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title %>
+  <%= form.label :text, "Text" %>
+  <%= form.text_area :text %>
+  <%= form.submit "Add Post" %>
+<% end %>
