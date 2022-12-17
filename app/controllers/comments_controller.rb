@@ -1,4 +1,9 @@
 class CommentsController < ApplicationController
+
+  def new
+    @comments = Comment.all
+  end
+
   def create
     @comment = Comment.new(params.require(:comment).permit(:text))
     @comment.author = current_user
