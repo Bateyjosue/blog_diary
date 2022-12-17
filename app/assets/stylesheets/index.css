@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Mina', sans-serif;
+}
+
+.user-banner {
+  height: 40vh;
+  width: 100%;
+  background-image: url('http://www.cottagepharmacy.com.au/wp-content/uploads/2015/03/bg.png');
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:antiquewhite;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+ul.cards-users {
+  width: 100%;
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  gap: .2rem;
+  padding:2rem 1rem;
+}
+
+.cards-users__content {
+  border: #0492C2 solid 1px;
+  list-style-type: none;
+  box-shadow: .4rem .4rem .4rem #ddd;
+  display: flex;
+  flex-direction: column;
+  gap:.6rem;
+  align-items: center;
+  background: rgba(222, 222, 222, 0.72);
+  height: 200px;
+  position: relative;
+}
+
+.cards-users__content__image  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:0px 0px 0px 5px white;
+  border: rgba(177, 177, 177, 0.816) 3px solid;
+  border-radius: 150%;
+  overflow: hidden;
+  position: absolute;
+  top: 1rem;
+
+}
+
+.cards-users__content__image img {
+  width: 56px;
+  height: 56px;
+  border-radius: .2rem;
+}
+
+a {
+  color: #0492C2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cards-users__content__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cards-users__content__body p{
+  font-size: .6rem;
+  position: absolute;
+  top: 7em;
+  background: red;
+  color: white;
+  border-radius: 1rem;
+  padding: .1rem .3rem;
+}
+.cards-users__content__body h2{
+  position: absolute;
+  font-size: .8rem;
+  background: #0492C2;
+  width: 100%;
+  bottom: 0rem;
+  text-align: center;
+  padding: .5rem .5rem;
+}
+
+.cards-users__content__body h2 a{
+  color: white;
+}
+
+.user-detail__posts{
+  gap: 1rem;
+  display:flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.user-detail__posts li{
+  list-style-type: none;
+}
+
+.user-detail__posts_info {
+  border: 1px gray solid;
+  padding: .8rem;
+
+}
+
+.user-detail__posts_info p{
+  font-size: .8rem;
+
+}
+
+.likes-comments {
+  text-align: right;
+  padding-top: .5rem;
+}
+
+.see-all{
+  background: red;
+  color: white;
+  border-radius: 1rem;
+  padding: .3rem .3rem;
+  text-align: center;
+  width: 50%;
+}
+
+.single-post {
+  padding: 1rem;
+}
+
+.single-post__info {
+  color: #0492C2;
+  display: flex;
+}
+
+.single-post__info span:nth-child(2) {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  /* background: red; */
+  padding: .2rem;
+  border-radius: .5rem;
+  color: rgba(93, 93, 93, 0.634);
+  flex: 1;
+}
+
+.single-post__info span:nth-child(2) span:nth-child(1){
+  font-size: 1rem;
+}
+
+.single-post__info__desc {
+  padding: 1rem;
+  text-align: justify;
+}
+
+.single-post__info__comments {
+  list-style-type: none;
+  font-size: .8em;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.single-post__info__comments h4 {
+text-decoration: underline;
+text-underline-offset: 5px;
+margin-bottom: .4rem;
+color: #8d8d8da8;
+}
+
+.single-post__info__comments li a{
+  background: rgba(231, 231, 231, 0.599);
+  border-radius: 1rem 1rem 0rem 1rem;
+  padding: 0rem .3rem;
+  }
+
+
+
+@media screen and (min-width:780px) {
+  ul.cards-users {
+    padding: 2rem 6rem;
+  }
+}
