@@ -1,7 +1,7 @@
 <div class="list-posts">
   <article class="cards-posts">
   <ul class="list-posts__author__info">
-    <%= render partial: "users/shared/user", locals: {user: @posts.first.author} %>
+    <%= render partial: "users/shared/user", locals: {user: @user} %>
   </ul>
   <div class="post-section">
     <% @posts.each do |post| %>
@@ -12,4 +12,7 @@
     <% end %>
   </div>
   </article>
+  <% if @posts.size > 2 %>
+    <button> Pagination</button>
+  <% end %>
 </div>

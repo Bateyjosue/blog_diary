@@ -1,4 +1,4 @@
-<%= form_with model: @post, local: true, method: :post, url: :new_user_post do |form| %>
+<%= form_with model: Post.new, url: :new_user_post do |form| %>
   <%= form.label :title, "Title" %>
   <%= form.text_field :title %>
   <%= form.label :text, "Text" %>
