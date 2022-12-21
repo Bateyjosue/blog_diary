@@ -1,4 +1,5 @@
 require 'rails_helper'
+# rubocop:disable Metrics/BlockLength
 describe User, type: :feature do
   before :all do
     @user1 = User.create(name: 'Josh',
@@ -34,3 +35,4 @@ describe User, type: :feature do
     expect(current_path).to eq user_path(@user1)
   end
 end
+# rubocop:enable Metrics/BlockLength
