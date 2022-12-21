@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to "/users/#{current_user.id}/posts/#{params[:post_id]}"
     else
+      flash.now[:error] = 'Not saved!'
       render :create
     end
   end

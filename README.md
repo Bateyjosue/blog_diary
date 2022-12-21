@@ -169,6 +169,12 @@ To run the project, execute the following command:
 - GitHub: [@Bateyjosue](https://github.com/Bateyjosue)
 - LinkedIn: [Bateyjosue](https://www.linkedin.com/in/josue-ishara/)
 
+👤 Melashu Amare
+
+- GitHub: [@melashu](https://github.com/melashu)
+- Twitter: [@meshu102](https://twitter.com/meshu102)
+- LinkedIn: [Melashu Amare](https://www.linkedin.com/in/melashu-amare/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- FUTURE FEATURES -->
 

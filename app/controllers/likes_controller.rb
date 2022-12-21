@@ -1,8 +1,8 @@
 class LikesController < ApplicationController
   def create
-    @like = Like.new
-    @like.author = current_user
-    @like.post_id = params[:post_id]
+    author = current_user
+    @post_id = params[:post_id]
+    @like = Like.new(author_id: author.id, post_id: @post_id)
 
     if @like.save
       flash[:success] = 'You liked this post!'
