@@ -74,15 +74,21 @@ describe Post, type: :feature do
 
   it 'should have likes number' do
     visit("users/#{@user1.id}/posts")
-
     expect(page).to have_content "#{@post1.likes_counter}"
   end
 
-  it 'should have pagination post fit the view' do
-    visit("users/#{@user1.id}/posts")
-
-    expect(page).to have_content 'Pagination'
+  if Post.all.count > 2
+    it 'should have pagination post fit the view' do
+      visit("users/#{@user1.id}/posts")
+      expect(page).to have_content 'Pagination'
+    end
+  else
+    it 'should not have pagination post' do
+      visit("users/#{@user1.id}/posts")
+      expect(page).to have_no_content 'Pagination'
+    end
   end
+
   it 'should redirect to a post' do
     visit("users/#{@user1.id}/posts")
     click_link @post1.title.to_s
