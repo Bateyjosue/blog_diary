@@ -2,8 +2,7 @@ require 'rails_helper'
 # rubocop:disable Metrics/BlockLength
 describe User, type: :feature do
   before :all do
-    @user1 = User.create(name: 'Josh',
-                         photo: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
+    @user1 = User.create(name: 'Josh', photo: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
                          bio: 'Here my story',
                          posts_counter: 0)
     @user2 = User.create(name: 'Meshu',
