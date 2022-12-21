@@ -9,13 +9,6 @@ describe Post, type: :feature do
       posts_counter: 0
     )
 
-    @user2 = User.create(
-      name: 'Joe',
-      photo: 'https://media-exp1.licdn.com/dms/image/D4D03AQEQHOj-BBrfzQ/profile-displayphoto-shrink_400_400/0/1664645715667?e=1672272000&v=beta&t=WiD4Rh1dlO_HKq2XD0U1hkufBrcD7Wltk2GinHzMDxo',
-      bio: 'AI Junior Developer',
-      posts_counter: 0
-    )
-
     @post1 = Post.create(
       title: 'Get to know chatGPT',
       text: 'Its pretrained AI chatbot',
@@ -27,7 +20,7 @@ describe Post, type: :feature do
     @comment1 = Comment.create(
       text: 'This is changing the store about AI',
       post: @post1,
-      author: @user2
+      author: @user1
     )
 
     visit("users/#{@user1.id}/posts/#{@post1.id}")

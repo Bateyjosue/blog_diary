@@ -9,7 +9,6 @@ describe User, type: :feature do
   end
   it 'Should have user name Ema' do
     visit user_path(@user1)
-
     expect(page).to have_content('Ema')
   end
 
@@ -27,13 +26,10 @@ describe User, type: :feature do
 
   it 'I can see the Ema bio.' do
     visit user_path(@user1)
-
     expect(page).to have_content(@user1.bio)
   end
 
   it 'I can see the users first 3 posts.' do
-    Post.create(author: @user1, title: 'Introduction to rails', text: 'Rails is a web', comments_counter: 0,
-                likes_counter: 0)
     Post.create(author: @user1, title: 'Introduction to testing', text: 'Rails is a web', comments_counter: 0,
                 likes_counter: 0)
     Post.create(author: @user1, title: 'Introduction to Capybara', text: 'Rails is a web', comments_counter: 0,
