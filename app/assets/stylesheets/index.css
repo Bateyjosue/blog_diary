@@ -7,6 +7,10 @@
   font-family: 'Mina', sans-serif;
 }
 
+header {
+  display: none;
+}
+
 .user-banner {
   height: 40vh;
   width: 100%;
@@ -199,5 +203,24 @@ a {
 @media screen and (min-width: 780px) {
   ul.cards-users {
     padding: 2rem 6rem;
+  }
+
+  header {
+    position: fixed;
+    top: 1rem;
+    right: 4rem;
+    left: 4rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav a{
+    color: rgb(89, 87, 87);
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem
   }
 }
