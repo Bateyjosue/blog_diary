@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
   def index
     @user = User.includes(:posts).find_by(id: params[:user_id])
-    # @posts = @user.
   end
 
   def show
-    # @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
   end
 
@@ -15,12 +13,15 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new(params.require(:post).permit(:title, :text))
-    post.author_id = current_user
+    post.author_id = current_user.id
+    post.comments_counter = 0
+    post.likes_counter = 0
 
     if post.save
+      flash[:notice] = "Post created successfully"
       redirect_to "/users/#{current_user.id}/posts/"
     else
-      flash.now[:errors] = post.errors.full_messages
+      flash.now[:error] = post.errors.full_messages
       render :new
     end
   end
