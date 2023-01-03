@@ -1,5 +1,4 @@
 require 'rails_helper'
-# rubocop:disable Metrics/BlockLength
 describe Post, type: :feature do
   before :each do
     @user1 = User.create(
@@ -53,5 +52,3 @@ describe Post, type: :feature do
     expect(page).to have_content @comment1.text
   end
 end
-
-# rubocop:enable Metrics/BlockLength

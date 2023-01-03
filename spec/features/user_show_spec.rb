@@ -1,5 +1,4 @@
 require 'rails_helper'
-# rubocop:disable Metrics/BlockLength
 describe User, type: :feature do
   before :each do
     @user1 = User.create(name: 'Ema',
@@ -62,11 +61,10 @@ describe User, type: :feature do
   end
 
   it 'should redirect to user show page' do
-    @post = Post.create(author: @user1, title: 'Introduction to rails', text: 'Rails is a web', comments_counter: 0, likes_counter: 0)
+    @post = Post.create(author: @user1, title: 'Introduction to rails', text: 'Rails is a web', comments_counter: 0,
+                        likes_counter: 0)
     visit user_posts_path(@user1)
     click_link @post.title
-    expect(user_posts_path(@user1)).to_not  eq("users/#{@user1.id}/posts/#{@post.id}")
+    expect(user_posts_path(@user1)).to_not eq("users/#{@user1.id}/posts/#{@post.id}")
   end
 end
-
-# rubocop:enable Metrics/BlockLength
