@@ -6,6 +6,6 @@
     <h2>
       <a href="/users/<%= user.id %>"><%= user.name %></a>
     </h2>
-    <p><%= user.posts_counter %> Posts</p>
+    <p><%= Post.where(author_id: user.id).size %> Posts</p>
   </div>
 </li>
