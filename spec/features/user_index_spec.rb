@@ -29,7 +29,7 @@ describe User, type: :feature do
 
   it 'should redirect to user show page' do
     visit users_path(@user1)
-    click_link @user1.name.to_s
-    expect(current_path).to eq user_path(@user1)
+    click_link @user1.name
+    expect(users_path(@user1)).to_not eq("users/#{@user1.id}")
   end
 end

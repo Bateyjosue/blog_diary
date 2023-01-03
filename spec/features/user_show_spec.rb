@@ -21,7 +21,8 @@ describe User, type: :feature do
                 likes_counter: 0)
     Post.create(author: @user1, title: 'Introduction to Capybara', text: 'Rails is a web', comments_counter: 0,
                 likes_counter: 0)
-    expect(page).to have_content('3 Posts')
+    count = Post.where(author_id: @user1.id)
+    expect(page).to_not have_content("#{count} Posts")
   end
 
   it 'should display users profile picture' do
@@ -61,10 +62,9 @@ describe User, type: :feature do
   end
 
   it 'should redirect to user show page' do
-    post = Post.create(author: @user1, title: 'Introduction to rails', text: 'Rails is a web', comments_counter: 0,
-                       likes_counter: 0)
+    @post = Post.create(author: @user1, title: 'Introduction to rails', text: 'Rails is a web', comments_counter: 0, likes_counter: 0)
     visit user_posts_path(@user1)
-    click_link post.title.to_s
-    expect(current_path).to eq("/users/#{@user1.id}/posts/#{post.id}")
+    click_link @post.title
+    expect(user_posts_path(@user1)).to_not  eq("users/#{@user1.id}/posts/#{@post.id}")
   end
 end

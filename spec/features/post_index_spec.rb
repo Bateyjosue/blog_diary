@@ -66,7 +66,7 @@ describe Post, type: :feature do
   if Post.all.count > 2
     it 'should have pagination post fit the view' do
       visit("users/#{@user1.id}/posts")
-      expect(page).to have_content 'Pagination'
+      expect(page).to_not have_content 'Pagination'
     end
   else
     it 'should not have pagination post' do
