@@ -1,4 +1,7 @@
 require 'rails_helper'
+
+# rubocop:disable Metrics/BlockLength
+
 describe User, type: :feature do
   before :each do
     @user1 = User.create(name: 'Ema',
@@ -68,3 +71,5 @@ describe User, type: :feature do
     expect(user_posts_path(@user1)).to_not eq("users/#{@user1.id}/posts/#{@post.id}")
   end
 end
+
+# rubocop:enable Metrics/BlockLength
