@@ -9,6 +9,8 @@
       </h2>
       <p><%= Post.where(author_id: user.id).size %> Posts</p>
     </div>
+    <% else %>
+      <%= redirect_to new_user_session_path %>
   <% end %>
   
 </li>
