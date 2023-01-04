@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-# rubocop:disable Metrics/BlockLength
 describe Post, type: :feature do
   before :each do
     @user1 = User.create(
@@ -82,5 +81,3 @@ describe Post, type: :feature do
     expect(current_path).to eq(user_post_path(@user1, @post1.id))
   end
 end
-
-# rubocop:enable Metrics/BlockLength
