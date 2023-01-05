@@ -7,6 +7,10 @@
   font-family: 'Mina', sans-serif;
 }
 
+header {
+  display: none;
+}
+
 .user-banner {
   height: 40vh;
   width: 100%;
@@ -199,5 +203,33 @@ a {
 @media screen and (min-width: 780px) {
   ul.cards-users {
     padding: 2rem 6rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    color: white;
+  }
+
+  header nav a {
+    color: black;
+    font-weight: bold;
+    transition: all 4ms ease-in-out;
+    letter-spacing: 0.05em;
+  }
+
+  header nav a:hover {
+    color: red;
   }
 }

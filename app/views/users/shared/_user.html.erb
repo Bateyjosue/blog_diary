@@ -1,11 +1,16 @@
 <li class="cards-users__content">
-  <div class="cards-users__content__image">
-    <img src=<%= user.photo %> />
-  </div>
-  <div class="cards-users__content__body">
-    <h2>
-      <a href="/users/<%= user.id %>"><%= user.name %></a>
-    </h2>
-    <p><%= Post.where(author_id: user.id).size %> Posts</p>
-  </div>
+  <% if user_signed_in?  %>
+    <div class="cards-users__content__image">
+      <img src=<%= user.photo %> />
+    </div>
+    <div class="cards-users__content__body">
+      <h2>
+        <a href="/users/<%= user.id %>"><%= user.name %></a>
+      </h2>
+      <p><%= Post.where(author_id: user.id).size %> Posts</p>
+    </div>
+    <% else %>
+      <%= redirect_to new_user_session_path %>
+  <% end %>
+  
 </li>

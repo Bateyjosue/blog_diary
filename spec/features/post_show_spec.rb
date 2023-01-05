@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 # rubocop:disable Metrics/BlockLength
+
 describe Post, type: :feature do
   before :each do
     @user1 = User.create(
