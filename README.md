@@ -81,7 +81,6 @@ After you're finished please remove all the comments and instructions!
 
 ## Video Demo
 
-# ![Video](https://raw.githubusercontent.com/TracyMuso/Catalog/dev/VedioDemo.mp4)
 
 ## 🛠 Built With <a name="built-with">Ruby</a>
 
